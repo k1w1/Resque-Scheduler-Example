@@ -20,7 +20,9 @@ test:
 
 production:
   adapter: postgresql
-  host: localhost
+  host: <%= ENV['POSTGRESQL_ADDRESS'] %>
   database: prod_db
   encoding: utf8
   pool: 5
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
